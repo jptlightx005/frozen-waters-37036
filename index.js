@@ -31,7 +31,7 @@ var mysql = require('mysql');
 var con = mysql.createConnection(process.env.CLEARDB_DATABASE_URL, true);
 
 app.get('/api/food/menu/get', function(request, response) {
-	con.query("SELECT * FROM food_menu", function (err, result, fields) {
+	con.query("SELECT `ID`, `name` FROM food_menu", function (err, result, fields) {
 		if (err) throw err;
 		response.send(result);
 	});
