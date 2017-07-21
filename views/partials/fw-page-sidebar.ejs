@@ -1,0 +1,26 @@
+ <div id="wrapper" class="toggled">
+
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            <a href="/api">
+                API List
+            </a>
+        </li>
+        <li>
+            <a <% if(isAPIPageActive(page, 'food')){ %> 
+                    href="#" class="active" 
+                <% }else{ %>
+                    href="/api/food"
+                <% } %>>Food</a>
+        </li>
+        <li>
+            <a <% if(isAPIPageActive(page, 'account')){ %> 
+                    href="#" class="active" 
+                <% }else{ %>
+                    href="#"
+                <% } %>>Account</a>
+        </li>
+    </ul>
+</div>
