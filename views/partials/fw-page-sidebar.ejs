@@ -9,10 +9,18 @@
             </a>
         </li>
         <li>
-            <a href="/api/food" <% if(isAPIPageActive(page, 'food')){ %> class="active" <% } %>>Food</a>
+            <a <% if(isAPIPageActive(page, 'food')){ %> 
+                    href="#" class="active" 
+                <% }else{ %>
+                    href="/api/food"
+                <% } %>>Food</a>
         </li>
         <li>
-            <a href="#">Account</a>
+            <a <% if(isAPIPageActive(page, 'account')){ %> 
+                    href="#" class="active" 
+                <% }else{ %>
+                    href="#"
+                <% } %>>Account</a>
         </li>
     </ul>
 </div>
