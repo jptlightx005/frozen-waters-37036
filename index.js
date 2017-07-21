@@ -13,10 +13,18 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-app.get('/api/', function(request, response) {
-  response.render('pages/api-documentation');
+app.get('/api', function(request, response) {
+  response.render('pages/api-documentation', {
+  					page : 'home'
+  					});
 });
 
+app.get('/api/food', function(request, response) {
+  response.render('pages/api-documentation/food-api', {
+  					title : 'Food',
+  					page : 'food'
+  					});
+});
 
 //Database
 var mysql = require('mysql');
@@ -34,6 +42,17 @@ app.get('/api/food/menu/get', function(request, response) {
 	});
 });
 
+//Helpers
+app.locals.isAPIPageActive = function(page, name) {
+	if(typeof page !== 'undefined'){
+		if(page != '' && name != ''){
+			if(page == name){
+				return true;
+			}
+		}
+	}
+	return false;
+}
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
