@@ -13,12 +13,16 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
+app.get('/api/', function(request, response) {
+  response.render('pages/api-documentation');
+});
+
 
 //Database
 var mysql = require('mysql');
 var con = mysql.createConnection(process.env.CLEARDB_DATABASE_URL, true);
 
-app.get('/food/menu/get', function(request, response) {
+app.get('/api/food/menu/get', function(request, response) {
 	con.connect(function(err) {
 		if (err) throw err;
 		console.log("Connected!");
