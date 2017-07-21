@@ -1,7 +1,7 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.2.6",
-  "description": "A sample Node.js app using Express 4",
+  "name": "frozen-waters-37036",
+  "version": "0.1.0",
+  "description": "Frozen Waters APP",
   "engines": {
     "node": "6.11.1"
   },
@@ -11,11 +11,12 @@
   },
   "dependencies": {
     "ejs": "2.5.6",
-    "express": "4.15.2"
+    "express": "4.15.2",
+    "mysql": "2.13.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "https://github.com/jptlightx005/frozen-waters-37036"
   },
   "keywords": [
     "node",
